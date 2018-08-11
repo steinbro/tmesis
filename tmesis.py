@@ -25,9 +25,9 @@ class TestFindTmesis(unittest.TestCase):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('word')
+    parser.add_argument('word', nargs='+')
     args = parser.parse_args()
 
-    if len(args.word) > 3:
-        for outside, inside in find_tmesis(args.word):
-            print('%s + %s = %s' % (outside, inside, args.word))
+    for word in args.word:
+        for outside, inside in find_tmesis(word):
+            print('%s - %s = %s' % (word, inside, outside))

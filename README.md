@@ -8,3 +8,12 @@ inserting one word somewhere within another word.
 >>> next(tmesis.find_tmesis('frankly'))
 ('fly', 'rank')
 ```
+
+Use the system word list to find some random examples:
+```
+$ sort -R /usr/share/dict/words | xargs python tmesis.py
+flowing - ow = fling
+flowing - win = flog
+flashlight - lash = flight
+...
+```
