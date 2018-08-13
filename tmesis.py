@@ -18,9 +18,13 @@ def find_tmesis(word, language):
 
 class TestFindTmesis(unittest.TestCase):
     def test_find_tmesis(self):
-        self.assertEqual(next(find_tmesis('sparking')), ('sing', 'park'))
-        self.assertEqual(next(find_tmesis('frankly')), ('fly', 'rank'))
-        self.assertEqual(len(list(find_tmesis('whatever'))), 0)
+        self.assertEqual(
+            next(find_tmesis('sparking', 'en_US')), ('sing', 'park'))
+        self.assertEqual(
+            next(find_tmesis('frankly', 'en_US')), ('fly', 'rank'))
+        self.assertEqual(
+            next(find_tmesis('determinando', 'es_ES')), ('dedo', 'terminan'))
+        self.assertEqual(len(list(find_tmesis('whatever', 'en_US'))), 0)
 
 
 if __name__ == '__main__':
