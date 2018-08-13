@@ -17,3 +17,9 @@ flowing - win = flog
 flashlight - lash = flight
 ...
 ```
+
+Any language supported by [pyenchant](https://github.com/rfk/pyenchant) can be used:
+```
+$ python tmesis.py --language es_ES determinando
+determinando - terminan = dedo
+```
