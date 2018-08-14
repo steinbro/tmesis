@@ -2,10 +2,10 @@ Deconstruct examples of tmesis, in which a word can be constructed by
 inserting one word somewhere within another word.
 
 ```
->>> import tmesis
->>> next(tmesis.find_tmesis('sparking'))
+>>> from tmesis import find_tmesis
+>>> next(find_tmesis('sparking', 'en_US'))
 ('sing', 'park')
->>> next(tmesis.find_tmesis('frankly'))
+>>> next(find_tmesis('frankly', 'en_US'))
 ('fly', 'rank')
 ```
 
